@@ -19,10 +19,6 @@ public class BeanExemple {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public double getWeight() {
 		return weight;
 	}
@@ -44,7 +40,7 @@ public class BeanExemple {
 	
 	@Override
 	public int hashCode() {
-		return name.hashCode() + 7*weight;
+		return name.hashCode();
 	}
 
 	public static void main(String... args) {
