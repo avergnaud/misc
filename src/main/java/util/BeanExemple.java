@@ -7,9 +7,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class BeanExemple {
 	
 	private String name;
-	private double weight;
+	private int weight;
 
-	public BeanExemple(String name, double weight) {
+	public BeanExemple(String name, int weight) {
 		super();
 		this.name = name;
 		this.weight = weight;
@@ -27,7 +27,7 @@ public class BeanExemple {
 		return weight;
 	}
 
-	public void setWeight(double weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 
@@ -41,9 +41,17 @@ public class BeanExemple {
 	public boolean equals(Object o) {
 		return EqualsBuilder.reflectionEquals(this, o);
 	}
+	
+	@Override
+	public int hashCode() {
+		return name.hashCode() + 7*weight;
+	}
 
 	public static void main(String... args) {
 		BeanExemple hippo = new BeanExemple("Harry", 1000);
+		BeanExemple hippo2 = new BeanExemple("Harry", 1000);
+		System.out.println(hippo.equals(hippo2));
+		System.out.println(hippo.hashCode() == hippo2.hashCode());
 		System.out.println(hippo);
 	}
 	
