@@ -5,8 +5,10 @@ import java.util.concurrent.*;
 import java.util.*;
 import etude.*;
 
+/*simule un appel distant*/
 public class Appel implements Callable<Integer> {
 
+/*attend entre 0 et 10 secondes*/
 public Integer call() throws InterruptedException {
 	out.println(Thread.currentThread().getName() + " enters Appel");
 	Random rand = new Random();

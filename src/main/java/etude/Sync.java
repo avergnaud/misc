@@ -4,6 +4,7 @@ import static java.lang.System.out;
 import java.util.concurrent.*;
 import etude.*;
 
+/*MAIN CLASS*/
 public class Sync {
 public static void main(String... args) throws InterruptedException {
 

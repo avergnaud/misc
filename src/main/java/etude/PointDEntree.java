@@ -4,6 +4,7 @@ import static java.lang.System.out;
 import java.util.concurrent.*;
 import etude.*;
 
+/*class avec la méthode synchronized*/
 public class PointDEntree {
 
 /*acquires lock on PointDEntree class*/
