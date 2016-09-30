@@ -16,6 +16,5 @@ try {
 } finally {
 internautes.shutdown();
 }
-internautes.awaitTermination(10,TimeUnit.MINUTES);
 
 }}
